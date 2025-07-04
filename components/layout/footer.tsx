@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">
               <Image
-                src={'/logowhite.svg' }
+                  src={'/kamban_white.png' }
                 alt="Kamban Mobiles Logo"
                 width={160} // adjust width/height as needed
                 height={40}

@@ -162,9 +162,9 @@ const ProductFilters = ({
             </div>
             
             <Slider
-              defaultValue={[0, 100000]}
+              defaultValue={[0, 500000]}
               min={0}
-              max={100000}
+              max={500000}
               step={1000}
               value={priceRange}
               onValueChange={handlePriceChange}

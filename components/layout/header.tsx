@@ -11,7 +11,7 @@ import Image from 'next/image';
 export const metadata = {
   title: "Your Website Title",
   icons: {
-    icon: "/favicon.png", // or "/favicon.png"
+    icon: "/favicon.ico", // or "/favicon.png"
   },
 };
 
@@ -44,7 +44,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src={isScrolled ? '/logowhite.svg' : '/logoblack.svg'}
+            src={isScrolled ? '/kamban_white.png' : '/kamban_black.png'}
             alt="Kamban Mobiles Logo"
             width={160} // adjust width/height as needed
             height={40}

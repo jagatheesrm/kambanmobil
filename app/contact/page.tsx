@@ -19,20 +19,20 @@ export default function ContactPage() {
               We&apos;d love to hear from you! Get in touch with us for any enquiries about our products or services.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <ContactInfo />
             <ContactForm />
           </div>
         </div>
       </section>
-      
+
       <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-6">Our Location</h2>
           <div className="h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62970.61556624028!2d77.84845881861979!3d9.831242448987894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0375dfd3063bbb%3A0x84bf2d050e8e5be4!2sThirumangalam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1718352444022!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?width=600&height=400&hl=en&q=251,%20Usilai%20Rd,%20Tirumangalam,%20Tamil%20Nadu%20625706&t=&z=14&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

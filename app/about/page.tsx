@@ -17,7 +17,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] bg-black">
         <div className="absolute inset-0 overflow-hidden opacity-60">
           <Image
-            src="https://images.pexels.com/photos/3178938/pexels-photo-3178938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={'/ourshop.webp' }
             alt="Kamban Mobiles Store"
             fill
             className="object-cover"
@@ -69,7 +69,7 @@ export default function AboutPage() {
             
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://images.pexels.com/photos/4386396/pexels-photo-4386396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://lh3.googleusercontent.com/p/AF1QipNPNtu_DjehPWp4UhzsGG7FIVfdht7YiEq940Zt=s680-w680-h510-rw"
                 alt="Our shop interior"
                 fill
                 className="object-cover"
