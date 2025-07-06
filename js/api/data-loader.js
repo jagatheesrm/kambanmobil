@@ -7,7 +7,13 @@ async function loadCategories() {
     try {
         showLoading(container);
         
-        const response = await fetch('https://admin.kambanmobiles.in/api/categories');
+        const response = await fetch('https://admin.kambanmobiles.in/api/categories', {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'HTML-App',
+            },
+        });
+        
         if (!response.ok) throw new Error('Failed to fetch categories');
         
         const categories = await response.json();
@@ -52,7 +58,13 @@ async function loadFeaturedProducts() {
     try {
         showLoading(container);
         
-        const response = await fetch('https://admin.kambanmobiles.in/api/featured-products');
+        const response = await fetch('https://admin.kambanmobiles.in/api/featured-products', {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'HTML-App',
+            },
+        });
+        
         if (!response.ok) throw new Error('Failed to fetch featured products');
         
         const products = await response.json();
@@ -64,6 +76,9 @@ async function loadFeaturedProducts() {
         
         const productsHTML = products.map(product => createProductCard(product)).join('');
         container.html(productsHTML);
+        
+        // Re-initialize Lucide icons
+        lucide.createIcons();
         
     } catch (error) {
         console.error('Error loading featured products:', error);
@@ -85,7 +100,13 @@ async function loadProducts(filters = {}) {
         if (filters.maxPrice) params.set('max_price', filters.maxPrice);
         if (filters.search) params.set('search', filters.search);
         
-        const response = await fetch(`https://admin.kambanmobiles.in/api/products?${params.toString()}`);
+        const response = await fetch(`https://admin.kambanmobiles.in/api/products?${params.toString()}`, {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'HTML-App',
+            },
+        });
+        
         if (!response.ok) throw new Error('Failed to fetch products');
         
         const products = await response.json();
@@ -105,30 +126,12 @@ async function loadProducts(filters = {}) {
         const productsHTML = products.map(product => createProductCard(product)).join('');
         container.html(productsHTML);
         
+        // Re-initialize Lucide icons
+        lucide.createIcons();
+        
     } catch (error) {
         console.error('Error loading products:', error);
         showError(container, 'Failed to load products');
-    }
-}
-
-// Load single product details
-async function loadProductDetails(slug) {
-    try {
-        const response = await fetch(`https://admin.kambanmobiles.in/api/products/${slug}`);
-        if (!response.ok) {
-            if (response.status === 404) {
-                window.location.href = '404.html';
-                return;
-            }
-            throw new Error('Failed to fetch product details');
-        }
-        
-        const product = await response.json();
-        renderProductDetails(product);
-        
-    } catch (error) {
-        console.error('Error loading product details:', error);
-        showError($('#product-details'), 'Failed to load product details');
     }
 }
 
@@ -136,8 +139,18 @@ async function loadProductDetails(slug) {
 async function loadFiltersData() {
     try {
         const [categoriesResponse, brandsResponse] = await Promise.all([
-            fetch('https://admin.kambanmobiles.in/api/categories'),
-            fetch('https://admin.kambanmobiles.in/api/brands')
+            fetch('https://admin.kambanmobiles.in/api/categories', {
+                headers: {
+                    'Accept': 'application/json',
+                    'User-Agent': 'HTML-App',
+                },
+            }),
+            fetch('https://admin.kambanmobiles.in/api/brands', {
+                headers: {
+                    'Accept': 'application/json',
+                    'User-Agent': 'HTML-App',
+                },
+            })
         ]);
         
         if (!categoriesResponse.ok || !brandsResponse.ok) {
@@ -157,7 +170,9 @@ async function loadFiltersData() {
 
 // Create product card HTML
 function createProductCard(product) {
-    const imageUrl = product.images && product.images.length > 0 ? product.images[0] : '/assets/images/placeholder.jpg';
+    const imageUrl = product.images && product.images.length > 0 ? 
+        (product.images[0].startsWith('http') ? product.images[0] : `https://admin.kambanmobiles.in/storage/${product.images[0]}`) : 
+        'assets/images/placeholder.jpg';
     const whatsappUrl = generateWhatsAppURL(product.name);
     
     return `
@@ -205,7 +220,8 @@ async function submitContactForm(formData) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'User-Agent': 'HTML-App',
             },
             body: JSON.stringify(formData)
         });
@@ -219,5 +235,25 @@ async function submitContactForm(formData) {
     } catch (error) {
         console.error('Error submitting contact form:', error);
         throw error;
+    }
+}
+
+// Load testimonials
+async function loadTestimonials() {
+    try {
+        const response = await fetch('https://admin.kambanmobiles.in/api/testimonials', {
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'HTML-App',
+            },
+        });
+        
+        if (!response.ok) throw new Error('Failed to fetch testimonials');
+        
+        return await response.json();
+        
+    } catch (error) {
+        console.error('Error loading testimonials:', error);
+        return [];
     }
 }

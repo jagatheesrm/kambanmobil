@@ -17,10 +17,33 @@ $(document).ready(function() {
     initSmoothScrolling();
     
     // Initialize page-specific functionality
-    if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('index.html')) {
+    const currentPage = getCurrentPage();
+    
+    if (currentPage === 'index') {
         initHomePage();
+    } else if (currentPage === 'products') {
+        initProductsPage();
+    } else if (currentPage === 'product-detail') {
+        // Product detail page initialization is handled in product-detail.js
     }
+    
+    // Load product generator for all pages
+    loadScript('js/api/product-generator.js');
 });
+
+// Get current page name
+function getCurrentPage() {
+    const path = window.location.pathname;
+    const page = path.split('/').pop().split('.')[0];
+    
+    if (page === '' || page === 'index') return 'index';
+    if (page === 'products') return 'products';
+    if (page === 'product-detail') return 'product-detail';
+    if (page === 'about') return 'about';
+    if (page === 'contact') return 'contact';
+    
+    return page;
+}
 
 // Header scroll effect
 function initHeaderScroll() {
@@ -90,6 +113,12 @@ function initHomePage() {
     loadTestimonials();
 }
 
+// Products page specific initialization
+function initProductsPage() {
+    // Products page initialization is handled in products.js
+    loadScript('js/pages/products.js');
+}
+
 // Utility functions
 function showLoading(container) {
     container.html(`
@@ -119,7 +148,7 @@ function formatPrice(price) {
         currency: 'INR',
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
-    }).format(price).replace('₹', '₹');
+    }).format(price);
 }
 
 // Generate WhatsApp URL
@@ -158,6 +187,14 @@ function setURLParameter(name, value) {
     window.history.pushState({}, '', url);
 }
 
+// Load script dynamically
+function loadScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    document.head.appendChild(script);
+}
+
 // Intersection Observer for animations
 function initScrollAnimations() {
     const observerOptions = {
@@ -182,4 +219,14 @@ function initScrollAnimations() {
 // Initialize scroll animations when DOM is ready
 $(document).ready(function() {
     initScrollAnimations();
+});
+
+// Global error handler
+window.addEventListener('error', function(e) {
+    console.error('Global error:', e.error);
+});
+
+// Global unhandled promise rejection handler
+window.addEventListener('unhandledrejection', function(e) {
+    console.error('Unhandled promise rejection:', e.reason);
 });
