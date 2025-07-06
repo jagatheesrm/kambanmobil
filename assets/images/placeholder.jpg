@@ -1,0 +1,8 @@
+# This is a placeholder for the actual image files
+# You would need to add the actual logo files:
+# - kamban_black.png (for light backgrounds)
+# - kamban_white.png (for dark backgrounds)
+# - ourshop.webp (store image)
+# - favicon.ico (website icon)
+
+# These files should be obtained from the original Next.js project
