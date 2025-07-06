@@ -26,9 +26,6 @@ $(document).ready(function() {
     } else if (currentPage === 'product-detail') {
         // Product detail page initialization is handled in product-detail.js
     }
-    
-    // Load product generator for all pages
-    loadScript('js/api/product-generator.js');
 });
 
 // Get current page name
@@ -53,10 +50,10 @@ function initHeaderScroll() {
     $(window).scroll(function() {
         if ($(window).scrollTop() > 10) {
             header.addClass('header-scrolled');
-            logo.attr('src', 'assets/images/kamban_white.png');
+            logo.attr('src', 'public/kamban_white.png');
         } else {
             header.removeClass('header-scrolled');
-            logo.attr('src', 'assets/images/kamban_black.png');
+            logo.attr('src', 'public/kamban_black.png');
         }
     });
 }

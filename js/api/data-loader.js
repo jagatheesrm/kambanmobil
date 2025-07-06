@@ -172,7 +172,7 @@ async function loadFiltersData() {
 function createProductCard(product) {
     const imageUrl = product.images && product.images.length > 0 ? 
         (product.images[0].startsWith('http') ? product.images[0] : `https://admin.kambanmobiles.in/storage/${product.images[0]}`) : 
-        'assets/images/placeholder.jpg';
+        'public/placeholder.jpg';
     const whatsappUrl = generateWhatsAppURL(product.name);
     
     return `

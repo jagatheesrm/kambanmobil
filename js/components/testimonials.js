@@ -24,10 +24,8 @@ class TestimonialsSlider {
     
     async loadTestimonials() {
         try {
-            const response = await fetch('https://admin.kambanmobiles.in/api/testimonials');
-            if (!response.ok) throw new Error('Failed to fetch testimonials');
-            
-            this.testimonials = await response.json();
+            const testimonials = await loadTestimonials();
+            this.testimonials = testimonials;
             this.renderTestimonials();
             this.renderDots();
             

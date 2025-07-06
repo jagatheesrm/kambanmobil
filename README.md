@@ -33,10 +33,12 @@ kamban-mobiles/
 │   │   ├── product-detail.js # Product detail page functionality
 │   │   └── contact.js      # Contact form handling
 │   └── api/
-│       ├── data-loader.js  # API integration functions
-│       └── product-generator.js # Product page generation
-├── assets/
-│   └── images/             # Logo and static images
+│       └── data-loader.js  # API integration functions
+├── public/
+│   ├── kamban_black.png    # Logo for light backgrounds
+│   ├── kamban_white.png    # Logo for dark backgrounds
+│   ├── ourshop.webp        # Store image
+│   └── favicon.ico         # Website icon
 └── README.md
 ```
 
