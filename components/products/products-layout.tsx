@@ -8,7 +8,7 @@ import { Product, ProductFilter } from '@/lib/types';
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
-import { Filter } from 'lucide-react';
+import { Filter, AlertCircle } from 'lucide-react';
 
 interface ProductsLayoutProps {
   categories: { id: string; name: string }[];
@@ -26,6 +26,8 @@ const ProductsLayout = ({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<ProductFilter>({
     category: selectedCategory,
     brand: selectedBrand,
@@ -34,6 +36,9 @@ const ProductsLayout = ({
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true);
+      setError(null);
+      
       const params = new URLSearchParams();
 
       if (filter.category) params.set('category', filter.category);
@@ -44,12 +49,25 @@ const ProductsLayout = ({
       }
 
       try {
-        const res = await fetch(`https://admin.kambanmobiles.in/api/products?${params.toString()}`);
+        const res = await fetch(`https://admin.kambanmobiles.in/api/products?${params.toString()}`, {
+          headers: {
+            'Accept': 'application/json',
+            'User-Agent': 'NextJS-App',
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error(`Failed to fetch products: ${res.status} ${res.statusText}`);
+        }
+
         const data = await res.json();
         setFilteredProducts(data);
       } catch (err) {
         console.error('Failed to fetch products:', err);
+        setError('Unable to load products. Please try again later.');
         setFilteredProducts([]);
+      } finally {
+        setLoading(false);
       }
 
       // Update URL
@@ -98,7 +116,22 @@ const ProductsLayout = ({
 
         {/* Product List */}
         <div className="lg:w-3/4">
-          <ProductGrid products={filteredProducts} />
+          {loading ? (
+            <div className="flex justify-center items-center min-h-[50vh]">
+              <div className="w-10 h-10 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          ) : error ? (
+            <div className="flex flex-col items-center justify-center min-h-[50vh] text-center">
+              <AlertCircle className="h-16 w-16 text-red-500 mb-4" />
+              <h2 className="text-xl font-semibold mb-2">Unable to Load Products</h2>
+              <p className="text-gray-600 mb-4">{error}</p>
+              <Button onClick={() => window.location.reload()}>
+                Try Again
+              </Button>
+            </div>
+          ) : (
+            <ProductGrid products={filteredProducts} />
+          )}
         </div>
       </div>
     </div>

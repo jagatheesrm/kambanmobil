@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Check, Loader2 } from 'lucide-react';
+import { Check, Loader2, AlertCircle } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
@@ -25,6 +25,7 @@ type FormValues = z.infer<typeof formSchema>;
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -39,24 +40,27 @@ const ContactForm = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       setIsSubmitting(true);
+      setSubmitError(null);
+      
       const response = await fetch('https://admin.kambanmobiles.in/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
+          'Accept': 'application/json',
+          'User-Agent': 'NextJS-App',
         },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error(`Failed to submit form: ${response.status} ${response.statusText}`);
       }
 
       setIsSubmitted(true);
       form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('There was a problem submitting the form.');
+      setSubmitError('There was a problem submitting the form. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -78,6 +82,13 @@ const ContactForm = () => {
       ) : (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            {submitError && (
+              <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+                <p className="text-red-700">{submitError}</p>
+              </div>
+            )}
+
             <FormField
               control={form.control}
               name="name"

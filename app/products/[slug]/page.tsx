@@ -18,11 +18,16 @@ export async function generateStaticParams() {
   try {
     const res = await fetch('https://admin.kambanmobiles.in/api/products', {
       cache: 'no-store',
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'NextJS-App',
+      },
     });
 
     if (!res.ok) {
       console.error(`Failed to fetch products: ${res.status} ${res.statusText}`);
-      throw new Error(`Failed to fetch products: ${res.status} ${res.statusText}`);
+      // Return empty array instead of throwing error to prevent build failure
+      return [];
     }
 
     const products = await res.json();
@@ -33,56 +38,80 @@ export async function generateStaticParams() {
     }));
   } catch (error) {
     console.error('Error fetching products:', error);
-    return []; // Return an empty array or handle the error as needed
+    // Return empty array to prevent build failure
+    return [];
   }
 }
 
 // Generate SEO metadata for each product page
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const res = await fetch(`https://admin.kambanmobiles.in/api/products/${params.slug}`, {
-    cache: 'no-store',
-  });
+  try {
+    const res = await fetch(`https://admin.kambanmobiles.in/api/products/${params.slug}`, {
+      cache: 'no-store',
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'NextJS-App',
+      },
+    });
 
-  if (!res.ok) {
+    if (!res.ok) {
+      return {
+        title: 'Product Not Found | Kamban Mobiles',
+        description: 'The requested product could not be found.',
+      };
+    }
+
+    const product = await res.json();
+
     return {
-      title: 'Product Not Found | Kamban Mobiles',
-      description: 'The requested product could not be found.',
+      title: `${product.name} | Kamban Mobiles`,
+      description: product.description,
+      keywords: `${product.name}, ${product.brand}, mobile phones, smartphones, ${product.category}`,
+      openGraph: {
+        title: product.name,
+        description: product.description,
+        type: 'website',
+        images: [
+          {
+            url: product.image,
+            width: 800,
+            height: 600,
+            alt: product.name,
+          },
+        ],
+      },
+    };
+  } catch (error) {
+    console.error('Error generating metadata:', error);
+    return {
+      title: 'Product | Kamban Mobiles',
+      description: 'Mobile phones and accessories at Kamban Mobiles.',
     };
   }
-
-  const product = await res.json();
-
-  return {
-    title: `${product.name} | Kamban Mobiles`,
-    description: product.description,
-    keywords: `${product.name}, ${product.brand}, mobile phones, smartphones, ${product.category}`,
-    openGraph: {
-      title: product.name,
-      description: product.description,
-      type: 'website',
-      images: [
-        {
-          url: product.image,
-          width: 800,
-          height: 600,
-          alt: product.name,
-        },
-      ],
-    },
-  };
 }
 
 // Main Product Page Component
 const ProductPage = async ({ params }: ProductPageProps) => {
-  const res = await fetch(`https://admin.kambanmobiles.in/api/products/${params.slug}`, {
-    cache: 'no-store',
-  });
+  try {
+    const res = await fetch(`https://admin.kambanmobiles.in/api/products/${params.slug}`, {
+      cache: 'no-store',
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'NextJS-App',
+      },
+    });
 
-  if (!res.ok) return notFound();
+    if (!res.ok) {
+      console.error(`Failed to fetch product: ${res.status} ${res.statusText}`);
+      return notFound();
+    }
 
-  const product = await res.json();
-
-  return <ProductDetail product={product} />;
+    const product = await res.json();
+    return <ProductDetail product={product} />;
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    return notFound();
+  }
 };
 
 export default ProductPage;
