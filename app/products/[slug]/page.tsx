@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import ProductDetail from '@/components/products/product-detail';
 import { products } from '@/lib/product-data';
 
@@ -109,6 +110,11 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 // Main Product Page Component
 const ProductPage = async ({ params }: ProductPageProps) => {
+  // Check if the slug is 'products' - this means the dynamic route incorrectly caught the main products page
+  if (params.slug === 'products') {
+    redirect('/products');
+  }
+
   const product = await fetchProductWithFallback(params.slug);
 
   if (!product) {
