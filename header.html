@@ -1,0 +1,52 @@
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent text-black py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between ">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img id="logo" src="assets/img/kamban_black.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="font-medium hover:text-primary transition-colors nav-link">Home</a>
+                <a href="about.html" class="font-medium hover:text-primary transition-colors nav-link">About Us</a>
+                <a href="products.html" class="font-medium hover:text-primary transition-colors nav-link">Products</a>
+                <a href="contact.html" class="font-medium hover:text-primary transition-colors nav-link">Contact</a>
+            </nav>
+
+            <!-- Phone Button -->
+            <div class="hidden md:flex items-center space-x-4" >
+                <a id="phoneBtn" href="tel:+918610088234" class="border-2 border-black text-black px-4 py-2 rounded hover:bg-primary hover:text-black transition-colors">
+                    <i data-lucide="phone" class="inline w-4 h-4 mr-2"></i>
+                    +91 86100 88234
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="fixed inset-0 bg-black bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="container mx-auto px-4 py-6 flex justify-end">
+            <button id="mobile-nav-close" class="text-white text-3xl">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center space-y-8 flex-grow">
+            <a href="index.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Home</a>
+            <a href="about.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">About Us</a>
+            <a href="products.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Products</a>
+            <a href="contact.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Contact</a>
+        </div>
+        <div class="container mx-auto px-4 py-8 flex flex-col items-center">
+            <p class="text-white mb-2">Contact Us</p>
+            <a href="tel:+918610088234" class="text-primary text-xl font-bold mb-6">+91 86100 88234</a>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" target="_blank" class="text-white hover:text-primary transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61575250442707" target="_blank" class="text-white hover:text-primary transition-colors">Facebook</a>
+            </div>
+        </div>
+    </div>

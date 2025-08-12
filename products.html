@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Kamban Mobiles</title>
-    <meta name="description" content="Browse our wide range of smartphones, accessories, and smartwatches at Kamban Mobiles. EMI options available.">
-    <meta name="keywords" content="mobile phones, smartphones, phone accessories, smartwatches, Kamban Mobiles products">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kamban Mobiles | Mobile Phones & Accessories Store in Tamil Nadu</title>
+    <meta name="description" content="Buy the latest smartphones, accessories, and smartwatches at Kamban Mobiles. Located in Thirumangalam, Madurai. EMI options available.">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,38 +21,39 @@
             }
         }
     </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- jQuery -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
 </head>
-<body class="bg-gray-50 text-gray-900">
+
+<body class="bg-white text-gray-900">
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white text-black py-4 shadow-md">
-        <div class="container mx-auto px-4 flex items-center justify-between">
+        <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent text-black py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between ">
+            <!-- Logo -->
             <a href="index.html" class="flex items-center space-x-2">
-                <img id="logo" src="assets/images/kamban_black.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
+                <img id="logo" src="assets/img/kamban_black.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
             </a>
 
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="font-medium hover:text-primary transition-colors nav-link">Home</a>
                 <a href="about.html" class="font-medium hover:text-primary transition-colors nav-link">About Us</a>
-                <a href="products.html" class="font-medium text-primary nav-link">Products</a>
+                <a href="products.html" class="font-medium hover:text-primary transition-colors nav-link">Products</a>
                 <a href="contact.html" class="font-medium hover:text-primary transition-colors nav-link">Contact</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="tel:+918610088234" class="border-2 border-black text-black px-4 py-2 rounded hover:bg-primary hover:text-black transition-colors">
+            <!-- Phone Button -->
+            <div class="hidden md:flex items-center space-x-4" >
+                <a id="phoneBtn" href="tel:+918610088234" class="border-2 border-black text-black px-4 py-2 rounded hover:bg-primary hover:text-black transition-colors">
                     <i data-lucide="phone" class="inline w-4 h-4 mr-2"></i>
                     +91 86100 88234
                 </a>
             </div>
 
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-2xl">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
@@ -72,7 +70,7 @@
         <div class="flex flex-col items-center justify-center space-y-8 flex-grow">
             <a href="index.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Home</a>
             <a href="about.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">About Us</a>
-            <a href="products.html" class="text-primary text-2xl font-medium mobile-nav-link">Products</a>
+            <a href="products.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Products</a>
             <a href="contact.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Contact</a>
         </div>
         <div class="container mx-auto px-4 py-8 flex flex-col items-center">
@@ -223,84 +221,86 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white mt-16">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">
-                        <img src="assets/images/kamban_white.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
-                    </h3>
-                    <p class="text-gray-300 mb-4">
-                        Your trusted store for the latest smartphones and accessories in Tamil Nadu.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" target="_blank" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="instagram" class="h-5 w-5"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61575250442707" target="_blank" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="facebook" class="h-5 w-5"></i>
-                        </a>
-                        <a href="mailto:contact@kambnmobiles.in" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="mail" class="h-5 w-5"></i>
-                        </a>
-                    </div>
-                </div>
+<footer class="bg-black text-white">
 
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="products.html" class="text-gray-300 hover:text-primary transition-colors">Products</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Products</h3>
-                    <ul class="space-y-2">
-                        <li><a href="products.html?category=smartphones" class="text-gray-300 hover:text-primary transition-colors">Smartphones</a></li>
-                        <li><a href="products.html?category=accessories" class="text-gray-300 hover:text-primary transition-colors">Accessories</a></li>
-                        <li><a href="products.html?category=smartwatches" class="text-gray-300 hover:text-primary transition-colors">Smart Watches</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5"></i>
-                            <span>251, Usilai Road, Thirumangalam, Madurai – 625 706</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="phone" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
-                            <a href="tel:+918610088234" class="hover:text-primary transition-colors">+91 86100 88234</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="mail" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
-                            <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">contact@kambnmobiles.in</a>
-                        </li>
-                    </ul>
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">
+                    <img src="assets/img/kamban_white.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Your trusted store for the latest smartphones and accessories in Tamil Nadu.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" target="_blank" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="instagram" class="h-5 w-5"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61575250442707" target="_blank" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="facebook" class="h-5 w-5"></i>
+                    </a>
+                    <a href="mailto:contact@kambnmobiles.in" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="mail" class="h-5 w-5"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-6 text-center">
-                <p class="text-gray-400">
-                    &copy; <span id="current-year"></span> Kamban Mobiles. All rights reserved.
-                </p>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="products.html" class="text-gray-300 hover:text-primary transition-colors">Products</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Products</h3>
+                <ul class="space-y-2">
+                    <li><a href="products.html?category=smartphones" class="text-gray-300 hover:text-primary transition-colors">Smartphones</a></li>
+                    <li><a href="products.html?category=accessories" class="text-gray-300 hover:text-primary transition-colors">Accessories</a></li>
+                    <li><a href="products.html?category=smartwatches" class="text-gray-300 hover:text-primary transition-colors">Smart Watches</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5"></i>
+                        <span>251, Usilai Road, Thirumangalam, Madurai – 625 706</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="phone" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
+                        <a href="tel:+918610088234" class="hover:text-primary transition-colors">+91 86100 88234</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="mail" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
+                        <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">contact@kambnmobiles.in</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/918610088234" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-40">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-    </a>
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+            <p class="text-gray-400">
+                &copy; <span id="current-year"></span> Kamban Mobiles. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/pages/products.js"></script>
-    <script src="js/api/data-loader.js"></script>
+<a href="https://wa.me/918610088234" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+</a>
+
+
+<!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pages/products.js"></script>
+    <script src="assets/js/api/data-loader.js"></script>
+
 </body>
+
 </html>

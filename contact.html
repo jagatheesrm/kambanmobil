@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Kamban Mobiles</title>
-    <meta name="description" content="Get in touch with Kamban Mobiles for any enquiries about mobile phones, accessories, or EMI options.">
-    <meta name="keywords" content="contact Kamban Mobiles, mobile store contact, Thirumangalam mobile shop">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kamban Mobiles | Mobile Phones & Accessories Store in Tamil Nadu</title>
+    <meta name="description" content="Buy the latest smartphones, accessories, and smartwatches at Kamban Mobiles. Located in Thirumangalam, Madurai. EMI options available.">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,38 +21,39 @@
             }
         }
     </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- jQuery -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
 </head>
-<body class="bg-gray-50 text-gray-900">
+
+<body class="bg-white text-gray-900">
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white text-black py-4 shadow-md">
-        <div class="container mx-auto px-4 flex items-center justify-between">
+        <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent text-black py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between ">
+            <!-- Logo -->
             <a href="index.html" class="flex items-center space-x-2">
-                <img id="logo" src="assets/images/kamban_black.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
+                <img id="logo" src="assets/img/kamban_black.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
             </a>
 
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="font-medium hover:text-primary transition-colors nav-link">Home</a>
                 <a href="about.html" class="font-medium hover:text-primary transition-colors nav-link">About Us</a>
                 <a href="products.html" class="font-medium hover:text-primary transition-colors nav-link">Products</a>
-                <a href="contact.html" class="font-medium text-primary nav-link">Contact</a>
+                <a href="contact.html" class="font-medium hover:text-primary transition-colors nav-link">Contact</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="tel:+918610088234" class="border-2 border-black text-black px-4 py-2 rounded hover:bg-primary hover:text-black transition-colors">
+            <!-- Phone Button -->
+            <div class="hidden md:flex items-center space-x-4" >
+                <a id="phoneBtn" href="tel:+918610088234" class="border-2 border-black text-black px-4 py-2 rounded hover:bg-primary hover:text-black transition-colors">
                     <i data-lucide="phone" class="inline w-4 h-4 mr-2"></i>
                     +91 86100 88234
                 </a>
             </div>
 
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-2xl">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
@@ -73,7 +71,7 @@
             <a href="index.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Home</a>
             <a href="about.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">About Us</a>
             <a href="products.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Products</a>
-            <a href="contact.html" class="text-primary text-2xl font-medium mobile-nav-link">Contact</a>
+            <a href="contact.html" class="text-white text-2xl font-medium hover:text-primary transition-colors mobile-nav-link">Contact</a>
         </div>
         <div class="container mx-auto px-4 py-8 flex flex-col items-center">
             <p class="text-white mb-2">Contact Us</p>
@@ -85,282 +83,285 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="pt-16">
-        <section class="bg-gray-50 py-16">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                    <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-                    <p class="text-gray-600">
-                        We'd love to hear from you! Get in touch with us for any enquiries about our products or services.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div>
-                        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-                            <h2 class="text-2xl font-bold mb-6">Get In Touch</h2>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="map-pin" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Address</h3>
-                                        <p class="text-gray-600">
-                                            251, Usilai Road, Thirumangalam, Madurai – 625 706
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="phone" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Phone</h3>
-                                        <p class="text-gray-600">
-                                            <a href="tel:+918610088234" class="hover:text-primary transition-colors">
-                                                +91 86100 88234
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="mail" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Email</h3>
-                                        <p class="text-gray-600">
-                                            <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">
-                                                contact@kambnmobiles.in
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="clock" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Hours</h3>
-                                        <p class="text-gray-600">
-                                            Monday - Saturday: 9:00 AM - 8:00 PM<br>
-                                            Sunday: 10:00 AM - 6:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-8 rounded-lg shadow-lg">
-                            <h2 class="text-2xl font-bold mb-6">Connect With Us</h2>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="instagram" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Instagram</h3>
-                                        <p class="text-gray-600">
-                                            <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" 
-                                               target="_blank" rel="noopener noreferrer"
-                                               class="hover:text-primary transition-colors">
-                                                @x_kamban_mobiles_x
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="bg-gray-100 p-3 rounded-full mr-4">
-                                        <i data-lucide="facebook" class="h-6 w-6 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg mb-1">Facebook</h3>
-                                        <p class="text-gray-600">
-                                            <a href="https://www.facebook.com/profile.php?id=61575250442707" 
-                                               target="_blank" rel="noopener noreferrer"
-                                               class="hover:text-primary transition-colors">
-                                                Kamban Mobiles
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div id="contact-form-container">
-                            <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
-                            
-                            <form id="contact-form" class="space-y-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                                    <input type="text" id="name" name="name" required
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                        <input type="email" id="email" name="email" required
-                                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
-                                    </div>
-
-                                    <div>
-                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                        <input type="tel" id="phone" name="phone" required
-                                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
-                                        <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                    <textarea id="message" name="message" rows="4" required
-                                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
-                                              placeholder="What would you like to know?"></textarea>
-                                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
-                                </div>
-
-                                <button type="submit" id="submit-btn"
-                                        class="w-full bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition-colors">
-                                    <span class="submit-text">Send Message</span>
-                                    <span class="loading-text hidden">
-                                        <i data-lucide="loader-2" class="inline w-4 h-4 mr-2 animate-spin"></i>
-                                        Sending...
-                                    </span>
-                                </button>
-                            </form>
-                        </div>
-
-                        <!-- Success Message -->
-                        <div id="success-message" class="text-center py-8 hidden">
-                            <div class="bg-green-100 text-green-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                                <i data-lucide="check" class="h-8 w-8"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3">Thank You!</h3>
-                            <p class="text-gray-600 mb-6">
-                                Your message has been successfully sent. We will get back to you shortly.
-                            </p>
-                            <button id="send-another" class="bg-primary text-black px-6 py-2 rounded hover:bg-yellow-500 transition-colors">
-                                Send Another Message
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Map Section -->
-        <section class="py-12">
-            <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-bold mb-6">Our Location</h2>
-                <div class="h-96 rounded-lg overflow-hidden shadow-lg">
-                    <iframe
-                        src="https://maps.google.com/maps?width=600&height=400&hl=en&q=251,%20Usilai%20Rd,%20Tirumangalam,%20Tamil%20Nadu%20625706&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-                        width="100%"
-                        height="100%"
-                        style="border: 0;"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Kamban Mobiles Store Location">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">
-                        <img src="assets/images/kamban_white.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
-                    </h3>
-                    <p class="text-gray-300 mb-4">
-                        Your trusted store for the latest smartphones and accessories in Tamil Nadu.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" target="_blank" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="instagram" class="h-5 w-5"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61575250442707" target="_blank" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="facebook" class="h-5 w-5"></i>
-                        </a>
-                        <a href="mailto:contact@kambnmobiles.in" class="text-white hover:text-primary transition-colors">
-                            <i data-lucide="mail" class="h-5 w-5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="products.html" class="text-gray-300 hover:text-primary transition-colors">Products</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Products</h3>
-                    <ul class="space-y-2">
-                        <li><a href="products.html?category=smartphones" class="text-gray-300 hover:text-primary transition-colors">Smartphones</a></li>
-                        <li><a href="products.html?category=accessories" class="text-gray-300 hover:text-primary transition-colors">Accessories</a></li>
-                        <li><a href="products.html?category=smartwatches" class="text-gray-300 hover:text-primary transition-colors">Smart Watches</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5"></i>
-                            <span>251, Usilai Road, Thirumangalam, Madurai – 625 706</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="phone" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
-                            <a href="tel:+918610088234" class="hover:text-primary transition-colors">+91 86100 88234</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="mail" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
-                            <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">contact@kambnmobiles.in</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 mt-12 pt-6 text-center">
-                <p class="text-gray-400">
-                    &copy; <span id="current-year"></span> Kamban Mobiles. All rights reserved.
+<!-- Main Content -->
+<main class="pt-16">
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+                <p class="text-gray-600">
+                    We'd love to hear from you! Get in touch with us for any enquiries about our products or services.
                 </p>
             </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Get In Touch</h2>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="map-pin" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Address</h3>
+                                    <p class="text-gray-600">
+                                        251, Usilai Road, Thirumangalam, Madurai – 625 706
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="phone" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Phone</h3>
+                                    <p class="text-gray-600">
+                                        <a href="tel:+918610088234" class="hover:text-primary transition-colors">
+                                            +91 86100 88234
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="mail" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Email</h3>
+                                    <p class="text-gray-600">
+                                        <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">
+                                            contact@kambnmobiles.in
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="clock" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Hours</h3>
+                                    <p class="text-gray-600">
+                                        Monday - Saturday: 9:00 AM - 8:00 PM<br>
+                                        Sunday: 10:00 AM - 6:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold mb-6">Connect With Us</h2>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="instagram" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Instagram</h3>
+                                    <p class="text-gray-600">
+                                        <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="hover:text-primary transition-colors">
+                                            @x_kamban_mobiles_x
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i data-lucide="facebook" class="h-6 w-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Facebook</h3>
+                                    <p class="text-gray-600">
+                                        <a href="https://www.facebook.com/profile.php?id=61575250442707"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="hover:text-primary transition-colors">
+                                            Kamban Mobiles
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div id="contact-form-container">
+                        <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="What would you like to know?"></textarea>
+                                <div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+                            </div>
+
+                            <button type="submit" id="submit-btn"
+                                class="w-full bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition-colors">
+                                <span class="submit-text">Send Message</span>
+                                <span class="loading-text hidden">
+                                    <i data-lucide="loader-2" class="inline w-4 h-4 mr-2 animate-spin"></i>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="success-message" class="text-center py-8 hidden">
+                        <div class="bg-green-100 text-green-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="check" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Thank You!</h3>
+                        <p class="text-gray-600 mb-6">
+                            Your message has been successfully sent. We will get back to you shortly.
+                        </p>
+                        <button id="send-another" class="bg-primary text-black px-6 py-2 rounded hover:bg-yellow-500 transition-colors">
+                            Send Another Message
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/918610088234" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-40">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-    </a>
+    <!-- Map Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Our Location</h2>
+            <div class="h-96 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                    src="https://maps.google.com/maps?width=600&height=400&hl=en&q=251,%20Usilai%20Rd,%20Tirumangalam,%20Tamil%20Nadu%20625706&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border: 0;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Kamban Mobiles Store Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/pages/contact.js"></script>
-    <script src="js/api/data-loader.js"></script>
+
+<footer class="bg-black text-white">
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">
+                    <img src="assets/img/kamban_white.png" alt="Kamban Mobiles Logo" class="h-10 w-auto">
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Your trusted store for the latest smartphones and accessories in Tamil Nadu.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/x_kamban_mobiles_x?igsh=NXAyb2U0cnY3eWgz" target="_blank" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="instagram" class="h-5 w-5"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61575250442707" target="_blank" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="facebook" class="h-5 w-5"></i>
+                    </a>
+                    <a href="mailto:contact@kambnmobiles.in" class="text-white hover:text-primary transition-colors">
+                        <i data-lucide="mail" class="h-5 w-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="products.html" class="text-gray-300 hover:text-primary transition-colors">Products</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Products</h3>
+                <ul class="space-y-2">
+                    <li><a href="products.html?category=smartphones" class="text-gray-300 hover:text-primary transition-colors">Smartphones</a></li>
+                    <li><a href="products.html?category=accessories" class="text-gray-300 hover:text-primary transition-colors">Accessories</a></li>
+                    <li><a href="products.html?category=smartwatches" class="text-gray-300 hover:text-primary transition-colors">Smart Watches</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i data-lucide="map-pin" class="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5"></i>
+                        <span>251, Usilai Road, Thirumangalam, Madurai – 625 706</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="phone" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
+                        <a href="tel:+918610088234" class="hover:text-primary transition-colors">+91 86100 88234</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="mail" class="h-5 w-5 mr-2 text-primary shrink-0"></i>
+                        <a href="mailto:contact@kambnmobiles.in" class="hover:text-primary transition-colors">contact@kambnmobiles.in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+            <p class="text-gray-400">
+                &copy; <span id="current-year"></span> Kamban Mobiles. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/918610088234" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+</a>
+
+
+<!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pages/contact.js"></script>
+    <script src="assets/js/api/data-loader.js"></script>
+
 </body>
+
 </html>
