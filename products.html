@@ -4,26 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamban Mobiles | Mobile Phones & Accessories Store in Tamil Nadu</title>
-    <meta name="description" content="Buy the latest smartphones, accessories, and smartwatches at Kamban Mobiles. Located in Thirumangalam, Madurai. EMI options available.">
+    <title>Mobile Phones & Accessories - Kamban Mobiles Thirumangalam, Madurai</title>
+    <meta name="description" content="Browse our wide range of smartphones, accessories, and smartwatches at Kamban Mobiles. EMI options available. Genuine products with warranty in Thirumangalam, Madurai.">
+    <meta name="keywords" content="mobile phones, smartphones, accessories, smartwatches, EMI, Thirumangalam, Madurai, genuine products">
+    <link rel="canonical" href="https://kambanmobiles.in/products.html">
+    
     <link rel="icon" href="assets/img/favicon.ico">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FFD700',
-                        secondary: '#000000'
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     
 </head>
 
@@ -87,17 +75,17 @@
     <main class="pt-24">
         <div class="container mx-auto px-4 py-8">
             <!-- Page Header -->
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 sm:mb-8 gap-4">
                 <div>
-                    <h1 class="text-3xl font-bold mb-2">Our Products</h1>
+                    <h1 class="text-2xl sm:text-3xl font-bold mb-2">Our Products</h1>
                     <p class="text-gray-600">Discover our wide range of smartphones, accessories, and smartwatches</p>
                 </div>
 
                 <!-- Search Bar -->
-                <div class="mt-4 md:mt-0 flex items-center space-x-4">
-                    <div class="relative">
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <div class="relative flex-1 sm:flex-none">
                         <input type="text" id="search-input" placeholder="Search products..." 
-                               class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                               class="w-full sm:w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                         <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"></i>
                     </div>
                     
@@ -108,9 +96,9 @@
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-8">
                 <!-- Filters Sidebar -->
-                <aside id="filters-sidebar" class="lg:w-1/4">
+                <aside id="filters-sidebar" class="lg:w-1/4 hidden lg:block">
                     <div class="bg-white p-6 rounded-lg shadow-md sticky top-24">
                         <div class="flex justify-between items-center mb-6">
                             <h2 class="text-xl font-bold">Filters</h2>
@@ -174,11 +162,11 @@
                 </aside>
 
                 <!-- Products Grid -->
-                <div class="lg:w-3/4">
+                <div class="lg:w-3/4 w-full">
                     <!-- Results Info -->
-                    <div class="flex justify-between items-center mb-6">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4">
                         <p id="results-count" class="text-gray-600">Loading products...</p>
-                        <select id="sort-select" class="border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <select id="sort-select" class="w-full sm:w-auto border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-primary focus:border-transparent">
                             <option value="">Sort by</option>
                             <option value="price_asc">Price: Low to High</option>
                             <option value="price_desc">Price: High to Low</option>
@@ -188,7 +176,7 @@
                     </div>
 
                     <!-- Products Grid -->
-                    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                         <!-- Products will be loaded dynamically -->
                         <div class="col-span-full flex justify-center items-center min-h-[400px]">
                             <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
@@ -207,8 +195,8 @@
     </main>
 
     <!-- Mobile Filters Modal -->
-    <div id="mobile-filters-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="fixed inset-y-0 right-0 w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300">
+    <div id="mobile-filters-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden lg:hidden">
+        <div class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl transform translate-x-full transition-transform duration-300">
             <div class="flex justify-between items-center p-4 border-b">
                 <h2 class="text-xl font-bold">Filters</h2>
                 <button id="close-mobile-filters" class="text-gray-500 hover:text-black">
@@ -296,6 +284,8 @@
 </a>
 
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/pages/products.js"></script>

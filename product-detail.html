@@ -4,26 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamban Mobiles | Mobile Phones & Accessories Store in Tamil Nadu</title>
-    <meta name="description" content="Buy the latest smartphones, accessories, and smartwatches at Kamban Mobiles. Located in Thirumangalam, Madurai. EMI options available.">
+    <title>Product Details - Kamban Mobiles Thirumangalam, Madurai</title>
+    <meta name="description" content="View detailed specifications and features of mobile phones and accessories at Kamban Mobiles. EMI options available. Genuine products with warranty.">
+    <meta name="keywords" content="product details, mobile specifications, smartphone features, EMI options, Kamban Mobiles">
+    <link rel="canonical" href="https://kambanmobiles.in/product-detail.html">
+    
     <link rel="icon" href="assets/img/favicon.ico">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FFD700',
-                        secondary: '#000000'
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     
 </head>
 
@@ -82,21 +70,21 @@
             </div>
         </div>
     </div>
-<main class="pt-24">
+<main class="pt-20 sm:pt-24">
         <!-- Loading State -->
-        <div id="loading-container" class="container mx-auto px-4 py-16">
+        <div id="loading-container" class="container mx-auto px-4 py-8 sm:py-16">
             <div class="flex justify-center items-center min-h-[50vh]">
                 <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
             </div>
         </div>
 
         <!-- Error State -->
-        <div id="error-container" class="container mx-auto px-4 py-16 hidden">
+        <div id="error-container" class="container mx-auto px-4 py-8 sm:py-16 hidden">
             <div class="text-center">
                 <i data-lucide="alert-circle" class="w-16 h-16 text-red-500 mx-auto mb-4"></i>
                 <h1 class="text-3xl font-bold mb-4">Product Not Found</h1>
                 <p class="text-gray-600 mb-8">The product you're looking for could not be found.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto sm:max-w-none">
                     <a href="index.html" class="bg-primary text-black px-8 py-3 rounded font-medium hover:bg-yellow-500 transition-colors">
                         Go to Homepage
                     </a>
@@ -118,10 +106,10 @@
                 <span id="breadcrumb-product-name" class="font-medium text-black"></span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16">
                 <!-- Product Images -->
                 <div class="relative">
-                    <div id="product-image-container" class="relative w-full h-96 rounded-lg overflow-hidden shadow-lg mb-4">
+                    <div id="product-image-container" class="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden shadow-lg mb-4">
                         <!-- Main product image will be inserted here -->
                     </div>
                     
@@ -133,8 +121,8 @@
 
                 <!-- Product Info -->
                 <div>
-                    <h1 id="product-name" class="text-3xl font-bold mb-4"></h1>
-                    <p id="product-price" class="text-2xl font-semibold text-primary mb-4"></p>
+                    <h1 id="product-name" class="text-2xl sm:text-3xl font-bold mb-4"></h1>
+                    <p id="product-price" class="text-xl sm:text-2xl font-semibold text-primary mb-4"></p>
                     <p id="product-description" class="text-gray-600 mb-6"></p>
 
                     <!-- EMI Information -->
@@ -149,7 +137,7 @@
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <div class="flex flex-col gap-4 mb-8">
                         <a id="whatsapp-btn" href="#" target="_blank" class="bg-primary text-black px-6 py-3 rounded font-medium hover:bg-yellow-500 transition-colors text-center">
                             <i data-lucide="message-circle" class="inline w-5 h-5 mr-2"></i>
                             Enquire on WhatsApp
@@ -160,8 +148,8 @@
                     </div>
 
                     <!-- Product Details -->
-                    <div class="border-t border-gray-200 pt-6">
-                        <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="border-t border-gray-200 pt-6 hidden sm:block">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                             <div>
                                 <span class="text-gray-600">Brand:</span>
                                 <span id="product-brand" class="ml-2 font-medium"></span>
@@ -176,9 +164,9 @@
             </div>
 
             <!-- Product Tabs -->
-            <div class="mb-16">
+            <div class="mb-12 sm:mb-16">
                 <div class="border-b border-gray-200">
-                    <nav class="-mb-px flex space-x-8">
+                    <nav class="-mb-px flex space-x-4 sm:space-x-8 overflow-x-auto">
                         <button class="tab-btn active border-b-2 border-primary text-primary py-2 px-1 font-medium" data-tab="specifications">
                             Specifications
                         </button>
@@ -293,6 +281,8 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/pages/product-detail.js"></script>
